@@ -9,19 +9,19 @@ function getCurrentWeather(location) {
       const current = data.current;
       currentContainer.innerHTML += `<div id="contain">
       <div id="name">${location.name}, ${location.region}</div>
-      <div id="tempf">${current.temp_f}°</div>
+      <div id="tempf">${current.temp_f}°F</div>
       <img src="${current.condition.icon}" width="100px" height="100px" >
       <div class="conditions">
       <div id="condition">${current.condition.text}</div>
       <div id="date">${location.localtime}</div>
   </div>
       <div class="extras">
-      <div id="humidity">Humidity: ${current.humidity}°</div>
-      <div id="wind">Wind: ${current.wind_mph}</div>
-      <div id="cloud">Cloud: ${current.cloud}</div>
-      <div id="uv">UV: ${current.uv}</div>
-      <div id="percipitation">Precipitation: ${current.precip_mm}</div>
-      <div id="feels">Feels Like: ${current.feelslike_f}°</div>
+      <div id="humidity">Humidity: ${current.humidity}%</div>
+      <div id="wind">Wind: ${current.wind_mph} mph</div>
+      <div id="cloud">Cloud Coverage: ${current.cloud}%</div>
+      <div id="uv">UV Index: ${current.uv}</div>
+      <div id="percipitation">Precipitation: ${current.precip_mm} in</div>
+      <div id="feels">Feels Like: ${current.feelslike_f}°F</div>
   </div>
       </div>
       `;
@@ -36,8 +36,9 @@ function getCurrentWeather(location) {
         <div id="forecast">
         <img src="${element.day.condition.icon}" width="100px" height="100px">
         <div id="cond">Conditions: ${element.day.condition.text}</div>
-        <div id="avgtemp">Average Temperature: ${element.day.avgtemp_f}</div>
-        <div id="avgtemp">Humidity: ${element.day.avghumidity}</div>
+        <div id="avgtemp">Average Temperature: ${element.day.avgtemp_f}°F</div>
+        <div id="avgtemp">Humidity: ${element.day.avghumidity}%</div>
+        <div id="avgtemp">UV Index: ${element.day.uv}</div>
         </div>`;
       }
     }
