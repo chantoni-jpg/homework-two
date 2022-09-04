@@ -42,7 +42,7 @@ function getCurrentWeather(location) {
       }
     }
   ).fail(function (e) {
-    alert("WTF IS A WEATHER????");
+    alert("Falied I guess lol");
   });
 }
 
