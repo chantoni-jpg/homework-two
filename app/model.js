@@ -1,4 +1,4 @@
-var key = "65122e7994f94669bc9202250222908";
+var key = "53599ec288054906a0a203018222908";
 var baseURL = "http://api.weatherapi.com/v1/";
 function getCurrentWeather(location) {
   $.get(
